@@ -8,12 +8,18 @@ body {
 }
 
 .ColWrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 20px;
 }
 
 .Col1 {
-    max-width: calc(100%/3);
-    flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Col1Var2 {
+    visibility: hidden;
 }
 
 .Col1 img {
@@ -21,7 +27,6 @@ body {
 }
 
 .Col2 {
-    flex-grow: 1;
 }
 
 .alert {

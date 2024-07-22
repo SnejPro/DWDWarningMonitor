@@ -65,6 +65,21 @@ function GetDWDAlerts(){
     });
 }
 
+function switchToColVar2(){
+    console.log("SwitchToColVar2");
+    $(".Col1Var2").css('visibility', 'visible');
+    $(".Col1Var1").css('visibility', 'hidden');
+    setTimeout(switchToColVar1, 20000)
+}
+
+function switchToColVar1(){
+    console.log("SwitchToColVar1");
+    $(".Col1Var2").css('visibility', 'hidden');
+    $(".Col1Var1").css('visibility', 'visible');
+    setTimeout(switchToColVar2, 10000)
+}
+
+
 function refreshImage(imgElement, imgURL){    
     // create a new timestamp 
     var timestamp = new Date().getTime();  
