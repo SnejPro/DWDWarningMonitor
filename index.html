@@ -16,6 +16,7 @@
             </div>
             <div class="Col Col1 Col1Var2">
                 <img id="warnrad" src="https://www.dwd.de/DWD/wetter/radar/radfilm_bay_akt.gif">
+                <img id="warnradvhs" src="https://www.dwd.de/DWD/wetter/radar/radarvhs.gif">
             </div>
             <div class="Col Col2">
                 <div id="Alerts">
@@ -39,6 +40,7 @@
              }, 30000);
              var intervalId2 = window.setInterval(function(){
                 refreshImage("warnrad", "https://www.dwd.de/DWD/wetter/radar/radfilm_bay_akt.gif");
+                refreshImage("warnradvhs", "https://www.dwd.de/DWD/wetter/radar/radarvhs.gif");
              }, 120000);
              switchToColVar1();
         </script>
