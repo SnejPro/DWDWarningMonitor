@@ -9,13 +9,14 @@ body {
 
 .ColWrapper {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 500px auto;
     grid-gap: 20px;
 }
 
 .Col1 {
     grid-column: 1;
     grid-row: 1;
+    overflow: hidden;
 }
 
 .Col1Var2 {
@@ -102,16 +103,14 @@ body {
     }
 }
 
+@media (max-width: 1500px) {
+    .ColWrapper {
+        grid-template-columns: fit-content(33%) auto;
+    }
+}
+
 @media (max-width: 850px) {
     .ColWrapper {
-        display: block;
-    }
-
-    .Col1 {
-        margin: 0 auto;
-    }
-
-    .Col2 {
-        margin-top: 30px;
+        grid-template-columns: auto;
     }
 }
