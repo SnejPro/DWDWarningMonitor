@@ -12,9 +12,11 @@
     <body class="dark-bg">
         <div class="ColWrapper">
             <div class="Col Col1 Col1Var1">
+                <div class="ColLoading" id="Col1Var1Loading"><div></div></div>
                 <img id="warnimg" src="https://www.dwd.de/DWD/warnungen/warnapp_gemeinden/json/warnungen_gemeinde_map_bay.png">
             </div>
             <div class="Col Col1 Col1Var2">
+                <div class="ColLoading" id="Col1Var2Loading"><div></div></div>
                 <img id="warnrad" src="https://www.dwd.de/DWD/wetter/radar/radfilm_bay_akt.gif">
                 <img id="warnradvhs" src="https://www.dwd.de/DWD/wetter/radar/radarvhs.gif">
             </div>
@@ -37,12 +39,12 @@
             var intervalId = window.setInterval(function(){
                 GetDWDAlerts();
                 refreshImage("warnimg", "https://www.dwd.de/DWD/warnungen/warnapp_gemeinden/json/warnungen_gemeinde_map_bay.png");
-             }, 30000);
-             var intervalId2 = window.setInterval(function(){
+            }, 30000);
+            var intervalId2 = window.setInterval(function(){
                 refreshImage("warnrad", "https://www.dwd.de/DWD/wetter/radar/radfilm_bay_akt.gif");
                 refreshImage("warnradvhs", "https://www.dwd.de/DWD/wetter/radar/radarvhs.gif");
-             }, 120000);
-             switchToColVar1();
+            }, 120000);
+            switchToColVar1();
         </script>
     </body>
 </html>

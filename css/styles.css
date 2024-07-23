@@ -7,6 +7,18 @@ body {
     padding: 20px;
 }
 
+.ColLoading {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+.ColLoading > div {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(153, 153, 153);
+}
+
 .ColWrapper {
     display: grid;
     grid-template-columns: 500px auto;

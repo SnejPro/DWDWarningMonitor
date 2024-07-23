@@ -67,15 +67,23 @@ function GetDWDAlerts(){
 
 function switchToColVar2(){
     console.log("SwitchToColVar2");
+    $("#Col1Var2Loading > div").css('transition', 'width 20s linear');
+    $("#Col1Var2Loading > div").css('width', '0%');
     $(".Col1Var2").css('visibility', 'visible');
     $(".Col1Var1").css('visibility', 'hidden');
+    $("#Col1Var1Loading > div").css('transition', '');
+    $("#Col1Var1Loading > div").css('width', '100%');
     setTimeout(switchToColVar1, 20000)
 }
 
 function switchToColVar1(){
     console.log("SwitchToColVar1");
+    $("#Col1Var1Loading > div").css('transition', 'width 10s linear');
+    $("#Col1Var1Loading > div").css('width', '0%');
     $(".Col1Var2").css('visibility', 'hidden');
     $(".Col1Var1").css('visibility', 'visible');
+    $("#Col1Var2Loading > div").css('transition', '');
+    $("#Col1Var2Loading > div").css('width', '100%');
     setTimeout(switchToColVar2, 10000)
 }
 
